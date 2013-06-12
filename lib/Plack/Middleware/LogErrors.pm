@@ -3,7 +3,58 @@ use warnings;
 package Plack::Middleware::LogErrors;
 # ABSTRACT: ...
 
+use parent 'Plack::Middleware';
 
+use Plack::Util::Accessor 'logger';
+use Scalar::Util 'reftype';
+
+sub prepare_app
+{
+    my $self = shift;
+    die "'logger' is not a coderef!"
+        if $self->logger and not __isa_coderef($self->logger);
+}
+
+sub call
+{
+    my ($self, $env) = @_;
+
+    my $logger = $self->logger || $env->{'psgix.logger'};
+    if (not $logger)
+    {
+        die 'no psgix.logger in $env; cannot map psgi.errors to it!';
+    }
+
+    # convert to something that matches the psgi.errors specs
+    $env->{'psgi.errors'} = Plack::Middleware::LogErrors::LogHandle->new($logger);
+
+    return $self->app->($env);
+}
+
+sub __isa_coderef
+{
+    ref $_[0] eq 'CODE'
+        or (reftype($_[0]) || '') eq 'CODE'
+        or overload::Method($_[0], '&{}')
+}
+
+package Plack::Middleware::LogErrors::LogHandle;
+# ABSTRACT: convert psgix.logger-like logger into an IO::Handle-like object
+
+sub new
+{
+    my ($class, $logger) = @_;
+    return bless { logger => $logger }, $class;
+}
+
+sub print
+{
+    my ($self, $message) = @_;
+    $self->{logger}->({
+        level => 'error',
+        message => $message,
+    });
+}
 
 1;
 __END__
