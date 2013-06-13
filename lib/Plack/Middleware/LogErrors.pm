@@ -20,10 +20,9 @@ sub call
     my ($self, $env) = @_;
 
     my $logger = $self->logger || $env->{'psgix.logger'};
-    if (not $logger)
-    {
-        die 'no psgix.logger in $env; cannot map psgi.errors to it!';
-    }
+
+    die 'no psgix.logger in $env; cannot map psgi.errors to it!'
+        if not $logger;
 
     # convert to something that matches the psgi.errors specs
     $env->{'psgi.errors'} = Plack::Middleware::LogErrors::LogHandle->new($logger);
