@@ -1,6 +1,10 @@
 use strict;
 use warnings FATAL => 'all';
 
+# try this out with:
+#   plackup examples/synopsis.psgi &
+#   curl http://localhost:5000/hi
+
 use Log::Dispatch;
 use Plack::Builder;
 
