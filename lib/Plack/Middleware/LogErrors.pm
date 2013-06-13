@@ -134,7 +134,6 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 * L<PSGI/The-Error-Stream> - the definition of C<psgi.errors>
 * L<Plack::Middleware::LogWarn> - maps warnings to C<psgi.errors>
 * L<Plack::Middleware::HTTPExceptions> - maps exceptions to C<psgi.errors>
-* L<Plack::Middleware::Log::Contextual> - use a L<Log::Contextual> logger for C<psgix.logger>
 * L<Plack::Middleware::LogDispatch> - use a L<Log::Dispatch> logger for C<psgix.logger>
 * L<Plack::Middleware::Log4perl> - use a L<Log::Log4perl> logger for C<psgix.logger>
 * L<Plack::Middleware::SimpleLogger> - essentially the opposite of this module!
