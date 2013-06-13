@@ -88,6 +88,8 @@ Using an explicitly defined logger:
 
 =head1 DESCRIPTION
 
+=for stopwords psgi psgix middlewares
+
 C<psgi.errors> defaults to C<stderr> in most backends, which results in
 content going somewhere unhelpful like the server console.
 
