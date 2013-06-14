@@ -131,7 +131,7 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 =begin :list
 
 * L<PSGI::Extensions> - the definition of C<psgix.logger>
-* L<PSGI/The-Error-Stream> - the definition of C<psgi.errors>
+* L<PSGI/"The Error Stream"> - the definition of C<psgi.errors>
 * L<Plack::Middleware::LogWarn> - maps warnings to C<psgi.errors>
 * L<Plack::Middleware::HTTPExceptions> - maps exceptions to C<psgi.errors>
 * L<Plack::Middleware::LogDispatch> - use a L<Log::Dispatch> logger for C<psgix.logger>
