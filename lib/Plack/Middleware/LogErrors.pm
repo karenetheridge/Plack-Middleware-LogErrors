@@ -108,16 +108,12 @@ is used).
 
 =head1 CONFIGURATION
 
-=over 4
-
-=item * C<logger>
+=head2 C<logger>
 
 A code reference for logging messages, that conforms to the
 L<psgix.logger|PSGI::Extensions/SPECIFICATION> specification.
 If not provided, C<psgix.logger> is used, or the application will generate an
 error at runtime if there is no such logger configured.
-
-=back
 
 =head1 SUPPORT
 
