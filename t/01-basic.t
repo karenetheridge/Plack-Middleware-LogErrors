@@ -2,8 +2,8 @@ use strict;
 use warnings FATAL => 'all';
 
 use Test::More;
+use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
 use Test::Fatal;
-use Test::Warnings;
 use Plack::Test;
 use HTTP::Request::Common;
 use Plack::Middleware::LogErrors;
