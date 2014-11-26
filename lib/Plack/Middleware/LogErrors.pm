@@ -2,6 +2,7 @@ use strict;
 use warnings;
 package Plack::Middleware::LogErrors;
 # ABSTRACT: Map psgi.errors to psgix.logger or other logger
+# KEYWORDS: plack middleware errors logging environment I/O handle
 
 use parent 'Plack::Middleware';
 
