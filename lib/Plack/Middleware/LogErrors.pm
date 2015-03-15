@@ -8,7 +8,7 @@ package Plack::Middleware::LogErrors;
 use parent 'Plack::Middleware';
 
 use Plack::Util::Accessor 'logger';
-use Scalar::Util 'reftype';
+use Scalar::Util ();
 
 sub prepare_app
 {
@@ -35,7 +35,7 @@ sub call
 sub __isa_coderef
 {
     ref $_[0] eq 'CODE'
-        or (reftype($_[0]) || '') eq 'CODE'
+        or (Scalar::Util::reftype($_[0]) || '') eq 'CODE'
         or overload::Method($_[0], '&{}')
 }
 
