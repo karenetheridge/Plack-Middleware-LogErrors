@@ -3,6 +3,7 @@ use warnings;
 package Plack::Middleware::LogErrors;
 # ABSTRACT: Map psgi.errors to psgix.logger or other logger
 # KEYWORDS: plack middleware errors logging environment I/O handle
+# vim: set ts=8 sts=4 sw=4 tw=78 et :
 
 use parent 'Plack::Middleware';
 
