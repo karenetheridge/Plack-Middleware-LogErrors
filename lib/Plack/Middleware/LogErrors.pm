@@ -5,6 +5,8 @@ package Plack::Middleware::LogErrors;
 # KEYWORDS: plack middleware errors logging environment I/O handle
 # vim: set ts=8 sts=4 sw=4 tw=78 et :
 
+our $VERSION = '0.003';
+
 use parent 'Plack::Middleware';
 
 use Plack::Util::Accessor 'logger';
@@ -41,6 +43,8 @@ sub __isa_coderef
 
 package Plack::Middleware::LogErrors::LogHandle;
 # ABSTRACT: convert psgix.logger-like logger into an IO::Handle-like object
+
+our $VERSION = '0.003';
 
 sub new
 {
