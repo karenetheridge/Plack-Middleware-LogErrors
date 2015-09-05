@@ -95,7 +95,7 @@ Using an explicitly defined logger:
 
 =for stopwords psgi psgix middlewares
 
-C<psgi.errors> defaults to C<stderr> in most backends, which results in
+C<psgi.errors> defaults to C<STDERR> in most backends, which results in
 content going somewhere unhelpful like the server console.
 
 This middleware simply remaps the C<psgi.errors> stream to the
