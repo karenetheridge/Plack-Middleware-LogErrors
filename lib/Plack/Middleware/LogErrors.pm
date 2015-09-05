@@ -120,14 +120,6 @@ L<psgix.logger|PSGI::Extensions/SPECIFICATION> specification.
 If not provided, C<psgix.logger> is used, or the application will generate an
 error at runtime if there is no such logger configured.
 
-=head1 SUPPORT
-
-=for stopwords irc
-
-Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Plack-Middleware-LogErrors>
-(or L<bug-Plack-Middleware-LogErrors@rt.cpan.org|mailto:bug-Plack-Middleware-LogErrors@rt.cpan.org>).
-I am also usually active on irc, as 'ether' at C<irc.perl.org>.
-
 =head1 SEE ALSO
 
 =for :list
