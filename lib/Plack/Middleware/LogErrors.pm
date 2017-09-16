@@ -41,10 +41,9 @@ sub __isa_coderef
         or overload::Method($_[0], '&{}')
 }
 
-package Plack::Middleware::LogErrors::LogHandle;
+package # hide from PAUSE
+    Plack::Middleware::LogErrors::LogHandle;
 # ABSTRACT: convert psgix.logger-like logger into an IO::Handle-like object
-
-our $VERSION = '0.003';
 
 sub new
 {
