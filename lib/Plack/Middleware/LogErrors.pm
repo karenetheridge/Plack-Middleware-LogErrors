@@ -5,7 +5,7 @@ package Plack::Middleware::LogErrors;
 # ABSTRACT: Map psgi.errors to psgix.logger or other logger
 # KEYWORDS: plack middleware errors logging environment I/O handle
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use parent 'Plack::Middleware';
 

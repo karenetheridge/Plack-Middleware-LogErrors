@@ -1,5 +1,7 @@
 Revision history for Plack-Middleware-LogErrors
 
+{{$NEXT}}
+
 0.003     2018-05-21 19:17:39Z
           - reftype is no longer erroneously added as a method
           - Plack::Middleware::LogErrors::LogHandle is no longer indexed by
