@@ -1,6 +1,10 @@
 Revision history for Plack-Middleware-LogErrors
 
 {{$NEXT}}
+          - reftype is no longer erroneously added as a method
+          - Plack::Middleware::LogErrors::LogHandle is no longer indexed by
+            PAUSE
+          - miscellaneous distribution tooling improvements
 
 0.002     2014-11-26 01:45:28Z
           - update metadata, ancillary files such as CONTRIBUTING
